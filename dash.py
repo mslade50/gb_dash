@@ -21,7 +21,7 @@ def seasonals_chart(tick):
 
 	spx1=yf.Ticker(ticker)
 	spx = spx1.history(period="max",end=end_date)
-
+	spx.index = pd.to_datetime(spx.index)
 	spx["log_return"] = np.log(spx["Close"] / spx["Close"].shift(1))*100
 
 	spx["day_of_month"] = spx.index.day
