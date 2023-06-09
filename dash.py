@@ -420,7 +420,7 @@ def seasonals_chart(tick):
 	# Add a white dot at the specified X coordinate and the interpolated Y value
 	fig.add_trace(go.Scatter(x=[length_value], y=[y_value_at_length], mode='markers', marker=dict(color='white', size=6), name='White Dot' ,showlegend=False))
 # 	fig.add_trace(go.Scatter(x=s3.index, y=s3.values, mode='lines', name='Mean Return', line=dict(color='blue')))
-	fig.add_trace(go.Scatter(x=[length_value], y=[y_2_value_at_length], mode='markers', marker=dict(color='white', size=6), name='White Dot' ,showlegend=False))
+# 	fig.add_trace(go.Scatter(x=[length_value], y=[y_2_value_at_length], mode='markers', marker=dict(color='white', size=6), name='White Dot' ,showlegend=False))
 	
 	fig.update_layout(
 	    title=f"Mean return path for {ticker2} in years {start}-present",
