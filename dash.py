@@ -419,7 +419,7 @@ def seasonals_chart(tick):
 
 	# Add a white dot at the specified X coordinate and the interpolated Y value
 	fig.add_trace(go.Scatter(x=[length_value], y=[y_value_at_length], mode='markers', marker=dict(color='white', size=6), name='White Dot' ,showlegend=False))
-	fig.add_trace(go.Scatter(x=s3.index, y=s3.values, mode='lines', name='Mean Return', line=dict(color='blue')))
+# 	fig.add_trace(go.Scatter(x=s3.index, y=s3.values, mode='lines', name='Mean Return', line=dict(color='blue')))
 	fig.add_trace(go.Scatter(x=[length_value], y=[y_2_value_at_length], mode='markers', marker=dict(color='white', size=6), name='White Dot' ,showlegend=False))
 	
 	fig.update_layout(
@@ -445,6 +445,6 @@ def seasonals_chart(tick):
 
 	st.plotly_chart(fig)
 
-megas_list=['ETH-USD','BTC-USD','^GSPC','^IXIC','^RUT','^RUO']
+megas_list=['ETH-USD','BTC-USD','^GSPC','^IXIC','^RUT','^RUO','SLV','GLD']
 for stock in megas_list:
 	seasonals_chart(stock)
